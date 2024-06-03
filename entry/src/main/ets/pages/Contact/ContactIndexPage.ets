@@ -75,7 +75,7 @@ struct ContactIndexPage {
             .fontColor($r('app.color.font'))
         }
         .onClick(() => {
-          // router.pushUrl({ url: 'pages/Contact/ContactOptimizePage' })
+          router.pushUrl({ url: 'pages/Contact/ContactOptimizePage' })
         })
       }
       .backgroundColor(Color.White)

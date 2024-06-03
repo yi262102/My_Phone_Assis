@@ -1,6 +1,7 @@
 {
   "src": [
     "pages/Index",
-    "pages/Contact/ContactIndexPage"
+    "pages/Contact/ContactIndexPage",
+    "pages/Contact/ContactOptimizePage"
   ]
 }

@@ -61,6 +61,17 @@ class ContactManager {
     return contact.queryContacts(getContext())
   }
 
+  //获取所有群组
+  async getGroups(): Promise<contact.Group[]>{
+    if (isEmulator()) {
+      return [
+        {title: '佛界小分队', groupId: 1 },
+        {title: '神界小分队', groupId: 2 },
+      ]
+    }
+    return contact.queryGroups(getContext())
+  }
+
 }
 
 export const contactManager = new ContactManager()
