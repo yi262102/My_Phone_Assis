@@ -38,8 +38,16 @@ struct Index {
       .tabBar('首页')
 
       TabContent() {
+        // GuardTabsComp()
+        Text('守护中心')
+      }
+      .tabBar('守护中心')
+
+
+      TabContent() {
         //我的
-        Text('功能开发中')
+        // Text('功能开发中')
+        MyTabsComp()
       }
       // .tabBar(this.TabBuilder('我的', 2, $r('app.media.ic_tab_wode_filled'), $r('app.media.ic_tab_wode')))
       .tabBar('我的')
