@@ -1,13 +1,25 @@
 {
   "module": {
+    "requestPermissions": [
+
+      //-----------------------------------------------------------------------------------
+      // --------------------------- ACL 跨级别权限 system_basic 需要签名证书 (不是Norma级别) ---------------------------
+      // 通讯录  //需要签名证书
+      {
+        "name": "ohos.permission.READ_CONTACTS",
+        "reason": '$string:permission_reason_contact',
+        "usedScene": {}
+      }
+    ],
+
     "name": "entry",
     "type": "entry",
     "description": "$string:module_desc",
     "mainElement": "EntryAbility",
     "deviceTypes": [
       "phone",
-      "tablet",
-      "2in1"
+//      "tablet",
+//      "2in1"
     ],
     "deliveryWithInstall": true,
     "installationFree": false,

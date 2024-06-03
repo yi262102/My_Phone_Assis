@@ -11,6 +11,10 @@
     {
       "name": "EntryAbility_label",
       "value": "我的手机助手"
+    },
+    {
+      "name": "permission_reason_contact",
+      "value": "用于通讯录授权"
     }
   ]
 }
