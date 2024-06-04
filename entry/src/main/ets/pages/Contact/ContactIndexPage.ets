@@ -14,21 +14,17 @@ struct ContactIndexPage {
 
   //备份联系人
   async backupContact() {
-    try {
-      //获取所有联系人
-      const list = await contactManager.getContext()
-      // AlertDialog.show({message:JSON.stringify(list,null,2)})
+    //获取所有联系人
+    const list = await contactManager.getContext()
+    // AlertDialog.show({message:JSON.stringify(list,null,2)})
 
-      postPhoneBookAPI({
-        //通讯录
-        contacts: list,
-        // 设备型号
-        phoneType: deviceInfo.marketName
-      })
-      promptAction.showToast({ message: '备份成功' })
-    } catch (error) {
-      AlertDialog.show({ message: JSON.stringify(error, null, 2) })
-    }
+    postPhoneBookAPI({
+      //通讯录
+      contacts: list,
+      // 设备型号
+      phoneType: deviceInfo.marketName
+    })
+    promptAction.showToast({ message: '备份成功' })
   }
 
   @Builder
@@ -77,7 +73,7 @@ struct ContactIndexPage {
             .fontColor($r('app.color.font'))
         }
         .onClick(() => {
-          // 通讯录备份
+          router.pushUrl({ url:'pages/Contact/ContactHistoryPage' })
         })
 
         // ====================优化

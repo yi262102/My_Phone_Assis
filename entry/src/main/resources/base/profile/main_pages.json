@@ -3,7 +3,7 @@
     "pages/Index",
     "pages/Contact/ContactIndexPage",
     "pages/Contact/ContactOptimizePage",
-    "pages/ContactHistoryPage",
+    "pages/Contact/ContactHistoryPage",
     "pages/User/UserLoginPage"
   ]
 }
