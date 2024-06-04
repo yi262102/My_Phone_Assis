@@ -14,7 +14,7 @@ class ContactManager {
   async requestPermissions() {
     try {
       // 申请权限
-      await permissionManager.requestPermissions(this.permissions)
+      permissionManager.requestPermissions(this.permissions)
     } catch {
       // 未开启弹窗提示
       promptAction.showDialog({

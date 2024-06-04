@@ -1,14 +1,34 @@
-import { router } from '@kit.ArkUI';
+import { promptAction, router } from '@kit.ArkUI';
 import { NavigationTitleBuilder } from '../../common/builders';
 import { contactManager } from '../../manager';
 import { contact } from '@kit.ContactsKit';
+import { postPhoneBookAPI } from '../../api';
+import { deviceInfo } from '@kit.BasicServicesKit';
 
 @Entry
 @Component
 struct ContactIndexPage {
-
-  aboutToAppear(){
+  aboutToAppear() {
     contactManager.requestPermissions()
+  }
+
+  //备份联系人
+  async backupContact() {
+    try {
+      //获取所有联系人
+      const list = await contactManager.getContext()
+      // AlertDialog.show({message:JSON.stringify(list,null,2)})
+
+      postPhoneBookAPI({
+        //通讯录
+        contacts: list,
+        // 设备型号
+        phoneType: deviceInfo.marketName
+      })
+      promptAction.showToast({ message: '备份成功' })
+    } catch (error) {
+      AlertDialog.show({ message: JSON.stringify(error, null, 2) })
+    }
   }
 
   @Builder
@@ -25,23 +45,15 @@ struct ContactIndexPage {
     .padding({ right: 25 })
   }
 
-  //备份联系人
-  async backupContact(){
-    //获取所有联系人
-    const list = await contactManager.getContext()
-    AlertDialog.show({message:JSON.stringify(list,null,2)})
-  }
-
-
   //主入口
   build() {
-    Navigation(){
-      Column(){
+    Navigation() {
+      Column() {
       }
       .width('100%')
       .height('30%')
 
-      Row({ space: 30 }){
+      Row({ space: 30 }) {
         // ====================备份
         Column() {
           Image($r('app.media.ic_contact_bf'))
@@ -55,6 +67,7 @@ struct ContactIndexPage {
           // contactManager.getContext()
           this.backupContact()
         })
+
         // ====================恢复
         Column() {
           Image($r('app.media.ic_contact_hf'))
@@ -66,6 +79,7 @@ struct ContactIndexPage {
         .onClick(() => {
           // 通讯录备份
         })
+
         // ====================优化
         Column() {
           Image($r('app.media.ic_contact_yh'))
@@ -82,7 +96,6 @@ struct ContactIndexPage {
       .justifyContent(FlexAlign.Center)
       .height('80%')
       .width('100%')
-
 
     }
     .title(NavigationTitleBuilder('通讯录备份'))

@@ -2,6 +2,7 @@
   "src": [
     "pages/Index",
     "pages/Contact/ContactIndexPage",
-    "pages/Contact/ContactOptimizePage"
+    "pages/Contact/ContactOptimizePage",
+    "pages/ContactHistoryPage"
   ]
 }

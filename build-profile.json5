@@ -6,9 +6,9 @@
         "type": "HarmonyOS",
         "material": {
           "certpath": "C:\\Users\\Administrator\\.ohos\\config\\default_My_Phone_Assis_0CMEoKqXYi1vFvG4spWZAQYuuN9MTGOrVzk9Op_6lSw=.cer",
-          "storePassword": "0000001AAF9861F24F94F64774A36316C16E580005DEED033573C087E17138CFBCEB46DE4B71C9D96F81",
+          "storePassword": "0000001AF98C8D0270F04AF47A06BA5016B25635572E7FEBEAFFCDD1E6EB46FC0488A7F1BA0F465912E3",
           "keyAlias": "debugKey",
-          "keyPassword": "0000001A38288753B004EE3DACFE9739B05247C35C0D9D7D50CBEA5CDE0B9F73DC3FB177A9528226C6A4",
+          "keyPassword": "0000001AB77FE7F40B66A6535BDE083FC154F091C398514CC6E919862F414C8C28B82162D959E81E6184",
           "profile": "C:\\Users\\Administrator\\.ohos\\config\\default_My_Phone_Assis_0CMEoKqXYi1vFvG4spWZAQYuuN9MTGOrVzk9Op_6lSw=.p7b",
           "signAlg": "SHA256withECDSA",
           "storeFile": "C:\\Users\\Administrator\\.ohos\\config\\default_My_Phone_Assis_0CMEoKqXYi1vFvG4spWZAQYuuN9MTGOrVzk9Op_6lSw=.p12"
